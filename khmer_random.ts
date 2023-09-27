@@ -19,7 +19,7 @@ async function getRandomKhmerWord(input: number) {
   return _word;
 }
 
-Deno.serve(async (req) => {
+Deno.serve(async (_req) => {
   const word = await getRandomKhmerWord(getRandomNum());
   const body = JSON.stringify({ word: word });
   if (word != null) {
